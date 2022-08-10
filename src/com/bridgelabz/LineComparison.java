@@ -3,13 +3,9 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class LineComparison {
-	/**
-	 * UC-3 - Taking coordinates for two lines as user input and
-	 * calculating the length of lines and comparing the two lines 
-	 * 
-	 */
 	
-		static double coordinates() {
+	
+		double coordinates() {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the first co-ordinate for x-axis:");
@@ -29,13 +25,13 @@ public class LineComparison {
 		 * This method is displaying the length
 		 * of both lines and checking the equality of lines as well
 		 */
-		public static void length() {
+		public void length() {
 			double line1 = coordinates();
 			String s1 = Double.toString(line1);
 			double line2 = coordinates();
 			String s2 = Double.toString(line2);
 			System.out.println("Length of Line 1 : "+s1);
-			System.out.println("Length of Line 1 : "+s2);
+			System.out.println("Length of Line 2 : "+s2);
 			if (s1.equals(s2))
 				System.out.println("Both lines are of same length");
 			else
@@ -48,7 +44,7 @@ public class LineComparison {
 		 * displaying the greater line/
 		 */
 		
-		static void compareLength() {
+		void compareLength() {
 			double line1 = coordinates();
 			String s1 = Double.toString(line1);
 			double line2 = coordinates();
@@ -70,8 +66,10 @@ public class LineComparison {
 		
 		System.out.println("Welcome to Line Comparison Computation Program");
 		
-		compareLength();
+		LineComparison obj = new LineComparison();
+		
+		
+		obj.compareLength();
 
 	}
-
 }
